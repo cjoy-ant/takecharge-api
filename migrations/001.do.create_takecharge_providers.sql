@@ -6,7 +6,7 @@ CREATE TABLE takecharge_providers (
   hcp_location TEXT NOT NULL,
   hcp_phone TEXT NOT NULL,
   hcp_address_street TEXT NOT NULL,
-  hcp_address_cty TEXT NOT NULL,
+  hcp_address_city TEXT NOT NULL,
   hcp_address_state TEXT NOT NULL,
   hcp_address_zip TEXT NOT NULL,
   hcp_date_modified TIMESTAMPTZ NOT NULL
