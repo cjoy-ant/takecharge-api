@@ -3,5 +3,5 @@ CREATE TABLE takecharge_recommendations (
   recommendation_type TEXT 
     REFERENCES takecharge_providers(hcp_type) ON DELETE CASCADE NOT NULL,
   recommendation_notes TEXT NOT NULL,
-  recommendation_date_modified TIMESTAMPTZ
+  recommendation_date_modified TIMESTAMPTZ NOT NULL
 );

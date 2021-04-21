@@ -6,8 +6,8 @@ CREATE TABLE takecharge_visits (
     REFERENCES takecharge_providers(hcp_name) ON DELETE CASCADE NOT NULL,
   visit_location TEXT NOT NULL
     REFERENCES takecharge_providers(hcp_location) ON DELETE CASCADE NOT NULL,
-  visit_date TEXT NOT NULL,
+  visit_date TIMESTAMPTZ NOT NULL,
   visit_reason TEXT NOT NULL,
   visit_notes TEXT NOT NULL,
-  visit_date_modified TIMESTAMPTZ
+  visit_date_modified TIMESTAMPTZ NOT NULL
 );
