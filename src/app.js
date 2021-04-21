@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const { NODE_ENV, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./error-handler");
+const providersRouter = require("./providers/providers-router");
 
 const app = express();
 
@@ -12,9 +13,13 @@ const morganOption = NODE_ENV === "production" ? "tiny" : "common";
 
 app.use(morgan(morganOption));
 app.use(helmet());
-app.use(cors({
-  origin: CLIENT_ORIGIN
-}));
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN,
+  })
+);
+
+app.use("/api/providers", providersRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello, world!");
