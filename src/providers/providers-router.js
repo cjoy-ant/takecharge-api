@@ -16,6 +16,7 @@ const serializeProvider = (provider) => ({
   hcp_address_city: xss(provider.hcp_address_city),
   hcp_address_state: xss(provider.hcp_address_state),
   hcp_address_zip: xss(provider.hcp_address_zip),
+  hcp_date_modified: provider.hcp_date_modified,
 });
 
 providersRouter
@@ -67,4 +68,34 @@ providersRouter
     });
   });
 
+providersRouter
+  .route("/:provider_id")
+  .all((req, res, next) => {
+    const knex = req.app.get("db");
+    ProvidersService.getById(knex, req.params.provider_id)
+      .then((provider) => {
+        if (!provider) {
+          return res.status(404).json({
+            error: { message: `Provider not found` },
+          });
+        }
+        res.provider = provider;
+        next();
+      })
+      .catch(next);
+  })
+  .get((req, res, next) => {
+    res.json({
+      hcp_id: res.provider.hcp_id,
+      hcp_type: xss(res.provider.hcp_type),
+      hcp_name: xss(res.provider.hcp_name),
+      hcp_location: xss(res.provider.hcp_location),
+      hcp_phone: xss(res.provider.hcp_phone),
+      hcp_address_street: xss(res.provider.hcp_address_street),
+      hcp_address_city: xss(res.provider.hcp_address_city),
+      hcp_address_state: xss(res.provider.hcp_address_state),
+      hcp_address_zip: xss(res.provider.hcp_address_zip),
+      hcp_date_modified: res.provider.hcp_date_modified,
+    });
+  });
 module.exports = providersRouter;
