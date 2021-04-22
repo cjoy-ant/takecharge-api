@@ -6,5 +6,5 @@ CREATE TABLE takecharge_visits (
   visit_date TIMESTAMPTZ NOT NULL,
   visit_reason TEXT NOT NULL,
   visit_notes TEXT NOT NULL,
-  visit_date_modified TIMESTAMPTZ NOT NULL
+  visit_date_modified TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
