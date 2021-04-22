@@ -97,5 +97,14 @@ providersRouter
       hcp_address_zip: xss(res.provider.hcp_address_zip),
       hcp_date_modified: res.provider.hcp_date_modified,
     });
+  })
+  .delete((req, res, next) => {
+    const knex = req.app.get("db");
+    ProvidersService.deleteProvider(knex, req.params.provider_id)
+      .then(() => {
+        res.status(204).end();
+      })
+      .catch(next);
   });
+
 module.exports = providersRouter;
