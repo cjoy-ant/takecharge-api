@@ -24,7 +24,7 @@ providersRouter
     const knex = req.app.get("db");
     ProvidersService.getAllProviders(knex)
       .then((providers) => {
-        res.json(providers.map(serializeProvider));
+        res.json(providers.map(serializeProvider))
       })
       .catch(next);
   })
@@ -58,7 +58,7 @@ providersRouter
         });
       }
     }
-
+  
     ProvidersService.insertProvider(knex, newProvider).then((provider) => {
       res
         .status(201)
