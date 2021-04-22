@@ -9,5 +9,5 @@ CREATE TABLE takecharge_providers (
   hcp_address_city TEXT NOT NULL,
   hcp_address_state TEXT NOT NULL,
   hcp_address_zip TEXT NOT NULL,
-  hcp_date_modified TIMESTAMPTZ NOT NULL
+  hcp_date_modified TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
