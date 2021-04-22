@@ -6,6 +6,7 @@ const cors = require("cors");
 const { NODE_ENV, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./error-handler");
 const providersRouter = require("./providers/providers-router");
+const recommendationsRouter = require("./recommendations/recommendations-router");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(
 );
 
 app.use("/api/providers", providersRouter);
+app.use("/api/recommendations", recommendationsRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello, world!");
