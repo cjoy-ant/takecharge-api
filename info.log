@@ -7,3 +7,13 @@
 {"message":"Unexpected token } in JSON at position 309","level":"error"}
 {"message":"NotesService is not defined","level":"error"}
 {"message":"RecommendationsService.deleteProvider is not a function","level":"error"}
+{"message":"VisitsService.insertRecommendation is not a function","level":"error"}
+{"message":"select * from \"takecharge_visits\" where \"recommendation_id\" = $1 limit $2 - column \"recommendation_id\" does not exist","level":"error"}
+{"message":"select * from \"takecharge_visits\" where \"recommendation_id\" = $1 limit $2 - column \"recommendation_id\" does not exist","level":"error"}
+{"message":"select * from \"takecharge_visits\" where \"recommendation_id\" = $1 limit $2 - column \"recommendation_id\" does not exist","level":"error"}
+{"message":"visit is not defined","level":"error"}
+{"message":"visit is not defined","level":"error"}
+{"message":"visit is not defined","level":"error"}
+{"message":"visit is not defined","level":"error"}
+{"message":"visit is not defined","level":"error"}
+{"message":"visit is not defined","level":"error"}

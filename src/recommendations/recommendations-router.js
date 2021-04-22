@@ -66,10 +66,10 @@ recommendationsRouter
   })
   .get((req, res, next) => {
     res.json({
-      recommendation_id: rec.recommendation_id,
-      recommendation_type: xss(rec.recommendation_type),
-      recommendation_notes: xss(rec.recommendation_notes),
-      recommendation_date_modified: rec.recommendation_date_modified,
+      recommendation_id: res.rec.recommendation_id,
+      recommendation_type: xss(res.rec.recommendation_type),
+      recommendation_notes: xss(res.rec.recommendation_notes),
+      recommendation_date_modified: res.rec.recommendation_date_modified,
     });
   })
   .delete((req, res, next) => {
