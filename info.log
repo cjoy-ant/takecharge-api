@@ -4,3 +4,5 @@
 {"message":"Cannot read property 'select' of undefined","level":"error"}
 {"message":"Cannot read property 'select' of undefined","level":"error"}
 {"message":"Cannot read property 'select' of undefined","level":"error"}
+{"message":"Unexpected token } in JSON at position 309","level":"error"}
+{"message":"NotesService is not defined","level":"error"}
