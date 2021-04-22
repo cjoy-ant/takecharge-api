@@ -105,6 +105,56 @@ providersRouter
         res.status(204).end();
       })
       .catch(next);
+  })
+  .patch(jsonParser, (req, res, next) => {
+    const {
+      hcp_type,
+      hcp_name,
+      hcp_location,
+      hcp_phone,
+      hcp_address_street,
+      hcp_address_city,
+      hcp_address_state,
+      hcp_address_zip,
+    } = req.body;
+    const providerToUpdate = {
+      hcp_type,
+      hcp_name,
+      hcp_location,
+      hcp_phone,
+      hcp_address_street,
+      hcp_address_city,
+      hcp_address_state,
+      hcp_address_zip,
+    };
+
+    const numberOfValues = Object.values(providerToUpdate).filter(Boolean)
+      .length;
+    if (numberOfValues === 0) {
+      return res.status(400).json({
+        error: {
+          message: `Request body must contain the following: hcp_type,
+          hcp_name,
+          hcp_location,
+          hcp_phone,
+          hcp_address_street,
+          hcp_address_city,
+          hcp_address_state,
+          hcp_address_zip,`,
+        },
+      });
+    }
+
+    const knex = req.app.get("db");
+    ProvidersService.updateProvider(
+      knex,
+      req.params.provider_id,
+      providerToUpdate
+    )
+      .then((numRowsAffected) => {
+        res.status(204).end();
+      })
+      .catch(next);
   });
 
 module.exports = providersRouter;
