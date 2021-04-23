@@ -131,8 +131,6 @@ function makeMaliciousRecommendation() {
     recommendation_id: "97a24eea-a3ba-11eb-bcbc-0242ac130002",
     recommendation_type: 'BAD <script>alert("xss");</script>',
     recommendation_notes: 'BAD <script>alert("xss");</script>',
-    hcp_location: 'BAD <script>alert("xss");</script>',
-    hcp_date_modified: new Date().toISOString(),
   };
 
   const expectedRecommendation = {

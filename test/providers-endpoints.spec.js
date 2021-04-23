@@ -349,7 +349,7 @@ describe("/providers Endpoints", function () {
     });
   });
 
-  describe.only("PATCH /api/providers/:provider_id", () => {
+  describe("PATCH /api/providers/:provider_id", () => {
     context("Given no providers", () => {
       it("responds with 404", () => {
         const providerId = testIds.provider;
