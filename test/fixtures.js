@@ -148,7 +148,7 @@ function makeMaliciousVisit() {
     visit_type: 'BAD <script>alert("xss");</script>',
     visit_provider_name: 'BAD <script>alert("xss");</script>',
     visit_location: 'BAD <script>alert("xss");</script>',
-    visit_date: 'BAD <script>alert("xss");</script>',
+    visit_date: "2021-04-21T16:24:02.922Z",
     visit_reason: 'BAD <script>alert("xss");</script>',
     visit_notes: 'BAD <script>alert("xss");</script>',
     visit_date_modified: new Date().toISOString(),
@@ -160,7 +160,7 @@ function makeMaliciousVisit() {
     visit_type: 'BAD &lt;script&gt;alert("xss");&lt;/script&gt;',
     visit_provider_name: 'BAD &lt;script&gt;alert("xss");&lt;/script&gt;',
     visit_location: 'BAD &lt;script&gt;alert("xss");&lt;/script&gt;',
-    visit_date: 'BAD &lt;script&gt;alert("xss");&lt;/script&gt;',
+    visit_date: "2021-04-21T16:24:02.922Z",
     visit_reason: 'BAD &lt;script&gt;alert("xss");&lt;/script&gt;',
     visit_notes: 'BAD &lt;script&gt;alert("xss");&lt;/script&gt;',
   };
