@@ -169,6 +169,12 @@ function makeMaliciousVisit() {
   return { maliciousVisit, expectedVisit };
 }
 
+const testIds = {
+  provider: "7d7c80b0-a3c1-11eb-bcbc-0242ac130002",
+  recommendation: "98af18fc-a3c1-11eb-bcbc-0242ac130002",
+  visit: "9cc6081a-a3c1-11eb-bcbc-0242ac130002",
+};
+
 module.exports = {
   makeProvidersArray,
   makeRecommendationsArray,
@@ -176,4 +182,5 @@ module.exports = {
   makeMaliciousProvider,
   makeMaliciousRecommendation,
   makeMaliciousVisit,
+  testIds,
 };

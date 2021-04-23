@@ -60,12 +60,14 @@ providersRouter
       }
     }
 
-    ProvidersService.insertProvider(knex, newProvider).then((provider) => {
-      res
-        .status(201)
-        .location(path.posix.join(req.originalUrl, `/${provider.hcp_id}`))
-        .json(serializeProvider(provider));
-    });
+    ProvidersService.insertProvider(knex, newProvider)
+      .then((provider) => {
+        res
+          .status(201)
+          .location(path.posix.join(req.originalUrl, `/${provider.hcp_id}`))
+          .json(serializeProvider(provider));
+      })
+      .catch(next);
   });
 
 providersRouter
