@@ -1,7 +1,7 @@
 const STORE = {
   providers: [
     {
-      hcp_id: 1,
+      hcp_id: "28715fdc-a1f5-11eb-bcbc-0242ac130002",
       hcp_type: "Primary Care Physician, Internal Medicine",
       hcp_name: "Dr. Maria Ignacio",
       hcp_location: "Advocate Medical Group",
@@ -10,10 +10,10 @@ const STORE = {
       hcp_address_city: "Chicago",
       hcp_address_state: "IL",
       hcp_address_zip: "60618",
-      hcp_date_modified: ''
+      hcp_date_modified: "",
     },
     {
-      hcp_id: 2,
+      hcp_id: "5dbe9d62-a1f5-11eb-bcbc-0242ac130002",
       hcp_type: "Gastroenterologist",
       hcp_name: "Dr. Abdul Verma",
       hcp_location: "Humbolt Park Health",
@@ -22,10 +22,10 @@ const STORE = {
       hcp_address_city: "Chicago",
       hcp_address_state: "IL",
       hcp_address_zip: "60622",
-      hcp_date_modified: ''
+      hcp_date_modified: "",
     },
     {
-      hcp_id: 3,
+      hcp_id: "8e8694d6-a1f5-11eb-bcbc-0242ac130002",
       hcp_type: "Dentist",
       hcp_name: "Dr. Simona Balan",
       hcp_location: "Dental Clinic of Morton Grove",
@@ -34,10 +34,10 @@ const STORE = {
       hcp_address_city: "Morton Grove",
       hcp_address_state: "IL",
       hcp_address_zip: "60053",
-      hcp_date_modified: ''
+      hcp_date_modified: "",
     },
     {
-      hcp_id: 4,
+      hcp_id: "e331292e-a1f5-11eb-bcbc-0242ac130002",
       hcp_type: "Physical Therapy",
       hcp_name: "Dr. Gran Intarakumhang",
       hcp_location: "Athletico",
@@ -46,60 +46,60 @@ const STORE = {
       hcp_address_city: "Chicago",
       hcp_address_state: "IL",
       hcp_address_zip: "60630",
-      hcp_date_modified: ''
+      hcp_date_modified: "",
     },
   ],
   recommendations: [
     {
-      recommendation_id: 1,
+      recommendation_id: "ba72ba58-a1fe-11eb-bcbc-0242ac130002",
       recommendation_type: "Gastroenterologist",
       recommendation_notes:
         "take omeprazolee daily for reflux, avoid reflux triggers",
-      recommendation_date_modified: ''
+      recommendation_date_modified: "",
     },
     {
-      recommendation_id: 2,
+      recommendation_id: "bf1553b8-a1fe-11eb-bcbc-0242ac130002",
       recommendation_type: "Dentist",
       recommendation_notes: "floss and use mouthwash daily",
-      recommendation_date_modified: ''
+      recommendation_date_modified: "",
     },
     {
-      recommendation_id: 3,
+      recommendation_id: "c161096e-a1fe-11eb-bcbc-0242ac130002",
       recommendation_type: "Physical Therapy",
       recommendation_notes: "ankle stretches and exercises x2/day",
-      recommendation_date_modified: ''
+      recommendation_date_modified: "",
     },
   ],
   visits: [
     {
-      visit_id: 1,
+      visit_id: "c4f85410-a1fe-11eb-bcbc-0242ac130002",
       visit_type: "Primary Care Physician, Internal Medicine",
       visit_provider_name: "Dr. Maria Ignacio",
       visit_location: "Advocate Medical Group",
       visit_date: "2021-08-15T13:00",
       visit_reason: "annual checkup",
       visit_notes: "ask about genetic testing referral",
-      visit_date_modified: ''
+      visit_date_modified: "",
     },
     {
-      visit_id: 2,
+      visit_id: "c6e6365c-a1fe-11eb-bcbc-0242ac130002",
       visit_type: "Dentist",
       visit_provider_name: "Dr. Simona Balan",
       visit_location: "Dental Clinic of Morton Grove",
       visit_date: "2021-02-23T14:30",
       visit_reason: "fill 3 cavities",
       visit_notes: "$40 per cavity and $50 co-pay",
-      visit_date_modified: ''
+      visit_date_modified: "",
     },
     {
-      visit_id: 3,
+      visit_id: "c8e7a422-a1fe-11eb-bcbc-0242ac130002",
       visit_type: "Physical Therapy",
       visit_provider_name: "Dr. Gran Intarakumhang",
       visit_location: "Athletico",
       visit_date: "2020-09-22T09:00",
       visit_reason: "broken ankle evaluation",
       visit_notes: "bring crutches and camboot",
-      visit_date_modified: ''
+      visit_date_modified: "",
     },
   ],
 };
