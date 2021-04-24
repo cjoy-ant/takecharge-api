@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
-const { NODE_ENV, CLIENT_ORIGIN } = require("./config");
+const { NODE_ENV, CLIENT_ORIGIN, LOCAL_CLIENT } = require("./config");
 const errorHandler = require("./error-handler");
 const providersRouter = require("./providers/providers-router");
 const recommendationsRouter = require("./recommendations/recommendations-router");
@@ -17,7 +17,7 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(
   cors({
-    origin: CLIENT_ORIGIN,
+    origin: [CLIENT_ORIGIN, LOCAL_CLIENT],
   })
 );
 
